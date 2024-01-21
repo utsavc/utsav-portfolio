@@ -1,0 +1,14 @@
+@keyframes example {
+  0% { background-color: white; }
+  50% { background-color: blanchedalmond; }
+  100% { background-color: white; }
+}
+
+/* The element to apply the animation to */
+div#contact {
+  background-color: white;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
