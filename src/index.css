@@ -2,5 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Your card style */
+.myproject {
+    /* Your card styling properties go here */
+    /* For example: */
+    /* background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 10px; */
+    transition: transform 0.3s ease-in-out; /* Define the transition property */
+  }
+  
+  /* Hover effect for the card */
+  .myproject:hover {
+    transform: scale(1.05); /* Apply a transform, like scaling, on hover */
+  animation-name: project;
+  animation-duration: 2s;
+  }
+
+
+
+  @keyframes project {
+    0% {background-color: white;}
+    50% {background-color: beige;}
+    100% {background-color: white;}
+  }
+  
+
 
 

@@ -14,7 +14,7 @@ const projectsData = [
   {
     id: 3,
     name: 'Blog Platform',
-    description: 'Created a blog platform using PHP, MySQL and React JS  with CRUD operations.',
+    description: 'Created a blog platform using PHP, MySQL and React JS with CRUD operations.',
   },
   {
     id: 4,
@@ -28,44 +28,44 @@ const projectsData = [
   },
   {
     id: 6,
-    name: 'Research Assesment Project',
+    name: 'Research Assessment Project',
     description: 'Built a social media dashboard with data visualization using chart libraries and React.',
   },
   {
     id: 7,
     name: 'Smart Spend',
-    description: 'Developed a job search platform that aggregates job listings from various sources and provides search functionality.',
+    description: 'Developed an App in Laravel which tracks the expenses and lets authority reject or accept expenses',
   },
   {
     id: 8,
     name: 'Inventory Management',
-    description: 'Developed a job search platform that aggregates job listings from various sources and provides search functionality.',
+    description: 'Developed a desktop application using C#, MySQL which helps to manage the inventory.',
   },
-//   {
-//     id: 9,
-//     name: 'Accounting Software',
-//     description: 'Developed a job search platform that aggregates job listings from various sources and provides search functionality.',
-//   },
+  // {
+  //   id: 9,
+  //   name: 'Accounting Software',
+  //   description: 'Developed a job search platform that aggregates job listings from various sources and provides search functionality.',
+  // },
 ];
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="bg-white p-4 rounded-md shadow-md">
-      <h3 className="text-xl font-bold">{project.name}</h3>
-      <p>{project.description}</p>
+    <div className="bg-white p-10 rounded-md shadow-md myproject">
+      <h3 className="text-xl font-bold mb-2">{project.name}</h3>
+      <p className="text-gray-600">{project.description}</p>
     </div>
   );
 };
 
 const Projects = () => {
   return (
-    <div className="bg-gray-100 p-10 h-screen" id='projects'>
+    <div className="bg-gray-100 p-10 min-h-screen pt-16" id="projects">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold">Projects</h2>
         <p className="text-gray-600">Check out some of my projects</p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {projectsData.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

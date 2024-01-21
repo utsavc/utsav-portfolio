@@ -60,77 +60,10 @@ const Startup = () => {
           
         </div>
 
-        {showNextComponent && <NextComponent />}
-
       </div>
     </>
   );
 };
 
-const NextComponent = () => {
-  const [showContent, setShowContent] = useState(false);
-
-  useEffect(() => {
-    // Show the content of NextComponent slowly after a delay
-    setTimeout(() => {
-      setShowContent(true);
-    }, 2000);
-  }, []);
-
-  const handleScrollToProjects = () => {
-    const projectsElement =
-      document.getElementById("projects") ||
-      document.getElementById("about") ||
-      document.getElementById("techStack") ||
-      document.getElementById("contact");
-    if (projectsElement) {
-      window.scrollTo({
-        top: projectsElement.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  return (
-    <div
-      className={`text-center text-green-700 text-2xl p-2 ${
-        showContent ? "opacity-100" : "opacity-0"
-      }`}
-    >
-      <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-3 items-center justify-center mx-0">
-        {/* <Link to="about" smooth={true} duration={500}>
-          <li className="hover:text-gray-300 cursor-pointer">About</li>
-        </Link> */}
-
-        <Link to="projects" smooth={true} duration={500}>
-          <li
-            className="hover:text-gray-300 cursor-pointer"
-            onClick={handleScrollToProjects}
-          >
-            Projects
-          </li>
-        </Link>
-
-        <Link to="techStack" smooth={true} duration={500}>
-          <li
-            className="hover:text-gray-300 cursor-pointer"
-            onClick={handleScrollToProjects}
-          >
-            Tech Stack
-          </li>
-        </Link>
-
-        <Link to="contact" smooth={true} duration={500}>
-          <li
-            className="hover:text-gray-300 cursor-pointer"
-            onClick={handleScrollToProjects}
-          >
-            Contact
-          </li>
-        </Link>
-      </ul>
-    </div>
-  );
-};
-
+    
 export default Startup;
